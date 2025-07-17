@@ -1,0 +1,658 @@
+[
+  {
+    "type": "ABITY",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "BASETY",
+          "named": true
+        },
+        {
+          "type": "IDENT",
+          "named": true
+        },
+        {
+          "type": "SUBWTY",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "AGGREGATE",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "IDENT",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "BASETY",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "BLOCK",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "COMMENT",
+          "named": true
+        },
+        {
+          "type": "INST",
+          "named": true
+        },
+        {
+          "type": "LABEL",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "CALL_INST",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABITY",
+          "named": true
+        },
+        {
+          "type": "GLOBAL",
+          "named": true
+        },
+        {
+          "type": "LOCAL",
+          "named": true
+        },
+        {
+          "type": "VAL",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "COMMENT",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "DATADEF",
+    "named": true,
+    "fields": {
+      "alignment": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "NUMBER",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "DATAITEM",
+          "named": true
+        },
+        {
+          "type": "EXTTY",
+          "named": true
+        },
+        {
+          "type": "GLOBAL",
+          "named": true
+        },
+        {
+          "type": "LINKAGE",
+          "named": true
+        },
+        {
+          "type": "NUMBER",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "DATAITEM",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "FP",
+          "named": true
+        },
+        {
+          "type": "GLOBAL",
+          "named": true
+        },
+        {
+          "type": "NUMBER",
+          "named": true
+        },
+        {
+          "type": "STRING",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "DYNCONST",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "FP",
+          "named": true
+        },
+        {
+          "type": "GLOBAL",
+          "named": true
+        },
+        {
+          "type": "NUMBER",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "EXTTY",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "BASETY",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "FUNCDEF",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABITY",
+          "named": true
+        },
+        {
+          "type": "BLOCK",
+          "named": true
+        },
+        {
+          "type": "GLOBAL",
+          "named": true
+        },
+        {
+          "type": "LINKAGE",
+          "named": true
+        },
+        {
+          "type": "LOCAL",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "GLOBAL",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "IDENT",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "INST",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ABITY",
+          "named": true
+        },
+        {
+          "type": "CALL_INST",
+          "named": true
+        },
+        {
+          "type": "LOCAL",
+          "named": true
+        },
+        {
+          "type": "NORMAL_INST",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "LABEL",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "IDENT",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "LINKAGE",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "SECFLAGS",
+          "named": true
+        },
+        {
+          "type": "SECNAME",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "LOCAL",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "IDENT",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "NORMAL_INST",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "IDENT",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "LABEL",
+          "named": true
+        },
+        {
+          "type": "VAL",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "SECFLAGS",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "STRING",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "SECNAME",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "STRING",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "SUBTY",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "AGGREGATE",
+          "named": true
+        },
+        {
+          "type": "EXTTY",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "SUBWTY",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "TYPEDEF",
+    "named": true,
+    "fields": {
+      "alignment": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "NUMBER",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "AGGREGATE",
+          "named": true
+        },
+        {
+          "type": "NUMBER",
+          "named": true
+        },
+        {
+          "type": "SUBTY",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "VAL",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "DYNCONST",
+          "named": true
+        },
+        {
+          "type": "LOCAL",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "COMMENT",
+          "named": true
+        },
+        {
+          "type": "DATADEF",
+          "named": true
+        },
+        {
+          "type": "FUNCDEF",
+          "named": true
+        },
+        {
+          "type": "TYPEDEF",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "$",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "...",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "@",
+    "named": false
+  },
+  {
+    "type": "FP",
+    "named": true
+  },
+  {
+    "type": "IDENT",
+    "named": true
+  },
+  {
+    "type": "NUMBER",
+    "named": true
+  },
+  {
+    "type": "STRING",
+    "named": true
+  },
+  {
+    "type": "align",
+    "named": false
+  },
+  {
+    "type": "b",
+    "named": false
+  },
+  {
+    "type": "call",
+    "named": false
+  },
+  {
+    "type": "d",
+    "named": false
+  },
+  {
+    "type": "d_",
+    "named": false
+  },
+  {
+    "type": "data",
+    "named": false
+  },
+  {
+    "type": "env",
+    "named": false
+  },
+  {
+    "type": "export",
+    "named": false
+  },
+  {
+    "type": "function",
+    "named": false
+  },
+  {
+    "type": "h",
+    "named": false
+  },
+  {
+    "type": "l",
+    "named": false
+  },
+  {
+    "type": "s",
+    "named": false
+  },
+  {
+    "type": "s_",
+    "named": false
+  },
+  {
+    "type": "sb",
+    "named": false
+  },
+  {
+    "type": "section",
+    "named": false
+  },
+  {
+    "type": "sh",
+    "named": false
+  },
+  {
+    "type": "thread",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "ub",
+    "named": false
+  },
+  {
+    "type": "uh",
+    "named": false
+  },
+  {
+    "type": "w",
+    "named": false
+  },
+  {
+    "type": "z",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]

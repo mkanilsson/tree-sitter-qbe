@@ -1,0 +1,41 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "qbe",
+      "camelcase": "QBE",
+      "title": "Quick backend",
+      "scope": "source.qbe",
+      "file-types": [
+        "ssa",
+        "qbe"
+      ],
+      "injection-regex": "^qbe$",
+      "class-name": "TreeSitterQbe",
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Grammar for the Quick Backend (QBE) intermediate representation",
+    "authors": [
+      {
+        "name": "Marcus Nilsson",
+        "email": "marcus.nilsson@genarp.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/mkanilsson/tree-sitter-qbe"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true,
+    "zig": false
+  }
+}
