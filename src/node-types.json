@@ -8,11 +8,11 @@
       "required": true,
       "types": [
         {
-          "type": "BASETY",
+          "type": "AGGREGATE",
           "named": true
         },
         {
-          "type": "IDENT",
+          "type": "BASETY",
           "named": true
         },
         {

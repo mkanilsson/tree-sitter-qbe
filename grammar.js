@@ -118,7 +118,7 @@ module.exports = grammar({
     GLOBAL: $ => seq('$', field('name', $.IDENT)),
     AGGREGATE: $ => seq(':', field('name', $.IDENT)),
 
-    ABITY: $ => choice($.BASETY, $.SUBWTY, seq(":", $.IDENT)),
+    ABITY: $ => choice($.BASETY, $.SUBWTY, $.AGGREGATE),
 
     _union_type: $ => seq(
       'type',

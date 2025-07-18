@@ -570,17 +570,8 @@
           "name": "SUBWTY"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "STRING",
-              "value": ":"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "IDENT"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "AGGREGATE"
         }
       ]
     },
