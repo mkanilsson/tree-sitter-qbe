@@ -37,7 +37,7 @@ module.exports = grammar({
       $.LINKAGE,
       'function',
       optional($.ABITY),
-      $.GLOBAL,
+      field('name', $.GLOBAL),
       '(',
       optional($._funcdef_params),
       ')',
@@ -59,7 +59,7 @@ module.exports = grammar({
     ),
 
     BLOCK: $ => seq(
-      $.LABEL,
+      field('label', $.LABEL),
       repeat(
         choice(
           $.INST,
@@ -69,7 +69,7 @@ module.exports = grammar({
     ),
 
     INST: $ => seq(
-      optional(seq($.LOCAL, '=', $.ABITY)),
+      optional(seq(field('assignment', $.LOCAL), '=', $.ABITY)),
       choice(
         $.NORMAL_INST,
         $.CALL_INST,
@@ -122,7 +122,7 @@ module.exports = grammar({
 
     _union_type: $ => seq(
       'type',
-      $.AGGREGATE,
+      field('name', $.AGGREGATE),
       '=',
       optional($._alignment),
       '{',

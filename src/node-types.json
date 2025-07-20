@@ -46,10 +46,21 @@
   {
     "type": "BLOCK",
     "named": true,
-    "fields": {},
+    "fields": {
+      "label": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "LABEL",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "COMMENT",
@@ -57,10 +68,6 @@
         },
         {
           "type": "INST",
-          "named": true
-        },
-        {
-          "type": "LABEL",
           "named": true
         }
       ]
@@ -208,7 +215,18 @@
   {
     "type": "FUNCDEF",
     "named": true,
-    "fields": {},
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "GLOBAL",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
@@ -219,10 +237,6 @@
         },
         {
           "type": "BLOCK",
-          "named": true
-        },
-        {
-          "type": "GLOBAL",
           "named": true
         },
         {
@@ -255,7 +269,18 @@
   {
     "type": "INST",
     "named": true,
-    "fields": {},
+    "fields": {
+      "assignment": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "LOCAL",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": true,
       "required": true,
@@ -266,10 +291,6 @@
         },
         {
           "type": "CALL_INST",
-          "named": true
-        },
-        {
-          "type": "LOCAL",
           "named": true
         },
         {
@@ -427,11 +448,21 @@
             "named": true
           }
         ]
+      },
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "AGGREGATE",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "AGGREGATE",

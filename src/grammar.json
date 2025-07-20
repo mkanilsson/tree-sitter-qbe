@@ -108,8 +108,12 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "GLOBAL"
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "GLOBAL"
+          }
         },
         {
           "type": "STRING",
@@ -224,8 +228,12 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "LABEL"
+          "type": "FIELD",
+          "name": "label",
+          "content": {
+            "type": "SYMBOL",
+            "name": "LABEL"
+          }
         },
         {
           "type": "REPEAT",
@@ -255,8 +263,12 @@
               "type": "SEQ",
               "members": [
                 {
-                  "type": "SYMBOL",
-                  "name": "LOCAL"
+                  "type": "FIELD",
+                  "name": "assignment",
+                  "content": {
+                    "type": "SYMBOL",
+                    "name": "LOCAL"
+                  }
                 },
                 {
                   "type": "STRING",
@@ -583,8 +595,12 @@
           "value": "type"
         },
         {
-          "type": "SYMBOL",
-          "name": "AGGREGATE"
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "AGGREGATE"
+          }
         },
         {
           "type": "STRING",
