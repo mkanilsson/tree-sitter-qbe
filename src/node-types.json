@@ -118,6 +118,16 @@
             "named": true
           }
         ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "GLOBAL",
+            "named": true
+          }
+        ]
       }
     },
     "children": {
@@ -130,10 +140,6 @@
         },
         {
           "type": "EXTTY",
-          "named": true
-        },
-        {
-          "type": "GLOBAL",
           "named": true
         },
         {

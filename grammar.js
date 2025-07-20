@@ -168,7 +168,7 @@ module.exports = grammar({
     DATADEF: $ => seq(
       optional($.LINKAGE),
       'data',
-      $.GLOBAL,
+      field('name', $.GLOBAL),
       '=',
       optional($._alignment),
       '{',

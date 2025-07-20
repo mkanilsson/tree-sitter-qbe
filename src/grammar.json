@@ -851,8 +851,12 @@
           "value": "data"
         },
         {
-          "type": "SYMBOL",
-          "name": "GLOBAL"
+          "type": "FIELD",
+          "name": "name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "GLOBAL"
+          }
         },
         {
           "type": "STRING",
