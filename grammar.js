@@ -39,22 +39,22 @@ module.exports = grammar({
       optional($.ABITY),
       field('name', $.GLOBAL),
       '(',
-      optional($._funcdef_params),
+      optional(field('params', $.FUNCDEF_PARAMS)),
       ')',
       '{',
       repeat1($.BLOCK),
       '}'
     ),
 
-    _funcdef_params: $ => seq(
-      $._funcdef_param,
-      repeat(seq(',', $._funcdef_param)),
+    FUNCDEF_PARAMS: $ => seq(
+      $.FUNCDEF_PARAM,
+      repeat(seq(',', $.FUNCDEF_PARAM)),
       optional(",")
     ),
 
-    _funcdef_param: $ => choice(
+    FUNCDEF_PARAM: $ => choice(
       '...',
-      seq($.ABITY, $.LOCAL),
+      seq(field('type', $.ABITY), field('name', $.LOCAL)),
       seq('env', $.LOCAL),
     ),
 

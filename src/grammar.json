@@ -123,8 +123,12 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "_funcdef_params"
+              "type": "FIELD",
+              "name": "params",
+              "content": {
+                "type": "SYMBOL",
+                "name": "FUNCDEF_PARAMS"
+              }
             },
             {
               "type": "BLANK"
@@ -152,12 +156,12 @@
         }
       ]
     },
-    "_funcdef_params": {
+    "FUNCDEF_PARAMS": {
       "type": "SEQ",
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_funcdef_param"
+          "name": "FUNCDEF_PARAM"
         },
         {
           "type": "REPEAT",
@@ -170,7 +174,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "_funcdef_param"
+                "name": "FUNCDEF_PARAM"
               }
             ]
           }
@@ -189,7 +193,7 @@
         }
       ]
     },
-    "_funcdef_param": {
+    "FUNCDEF_PARAM": {
       "type": "CHOICE",
       "members": [
         {
@@ -200,12 +204,20 @@
           "type": "SEQ",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "ABITY"
+              "type": "FIELD",
+              "name": "type",
+              "content": {
+                "type": "SYMBOL",
+                "name": "ABITY"
+              }
             },
             {
-              "type": "SYMBOL",
-              "name": "LOCAL"
+              "type": "FIELD",
+              "name": "name",
+              "content": {
+                "type": "SYMBOL",
+                "name": "LOCAL"
+              }
             }
           ]
         },
